@@ -27,7 +27,7 @@ export default function Navigation() {
           href="tel:9900447762"
           className="rounded-full bg-white px-5 py-2 text-[10px] font-bold uppercase tracking-widest text-[#053E43] hover:bg-[#F0FDFA] transition-colors"
         >
-          Call: 9900447762
+          Call Now
         </a>
       </nav>
     </header>

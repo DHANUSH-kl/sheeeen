@@ -1,6 +1,21 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export default function Testimonials() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const reviews = [
     {
       text: "Paint looks better than new. Professional work that exceeded all expectations.",
@@ -30,7 +45,7 @@ export default function Testimonials() {
   ];
 
   // Create enough duplicates for seamless infinite scroll
-  const track = [...reviews, ...reviews, ...reviews, ...reviews];
+  const track = [...reviews, ...reviews, ...reviews, ...reviews, ...reviews, ...reviews];
 
   return (
     <section className="py-24 bg-white overflow-hidden">
@@ -50,22 +65,23 @@ export default function Testimonials() {
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
-        {/* Marquee with hover pause */}
-        <div className="flex animate-[marquee_60s_linear_infinite] group-hover:animate-paused">
+        {/* Marquee with hover pause - MUCH FASTER */}
+        <div className="flex animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused]">
           {/* First set of cards */}
           {track.map((review, i) => (
             <div
               key={`set1-${i}`}
-              className="flex-shrink-0 w-[360px] mx-4"
+              className="flex-shrink-0 w-[280px] sm:w-[320px] mx-3"
             >
-              <div className="h-[220px] rounded-xl border border-[#053E43]/10 bg-white p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-[200px] sm:h-[220px] rounded-xl border border-[#053E43]/10 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
                 {/* stars */}
-                <div className="flex gap-1 text-[#0E5F66] mb-4">
+                <div className="flex gap-1 text-[#0E5F66] mb-3 sm:mb-4">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <svg
                       key={s}
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
+                      className="sm:w-[18px] sm:h-[18px]"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
@@ -75,13 +91,13 @@ export default function Testimonials() {
                 </div>
 
                 {/* quote */}
-                <p className="italic text-sm text-[#053E43]/80 leading-relaxed">
+                <p className="italic text-xs sm:text-sm text-[#053E43]/80 leading-relaxed">
                   "{review.text}"
                 </p>
 
                 {/* author */}
-                <div className="pt-4 border-t border-[#053E43]/5">
-                  <p className="text-sm uppercase tracking-widest text-[#053E43]">
+                <div className="pt-3 sm:pt-4 border-t border-[#053E43]/5">
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-[#053E43]">
                     {review.author}
                   </p>
                   <p className="text-xs text-[#053E43]/60">
@@ -96,16 +112,17 @@ export default function Testimonials() {
           {track.map((review, i) => (
             <div
               key={`set2-${i}`}
-              className="flex-shrink-0 w-[360px] mx-4"
+              className="flex-shrink-0 w-[280px] sm:w-[320px] mx-3"
               aria-hidden="true"
             >
-              <div className="h-[220px] rounded-xl border border-[#053E43]/10 bg-white p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex gap-1 text-[#0E5F66] mb-4">
+              <div className="h-[200px] sm:h-[220px] rounded-xl border border-[#053E43]/10 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex gap-1 text-[#0E5F66] mb-3 sm:mb-4">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <svg
                       key={s}
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
+                      className="sm:w-[18px] sm:h-[18px]"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
@@ -113,11 +130,11 @@ export default function Testimonials() {
                     </svg>
                   ))}
                 </div>
-                <p className="italic text-sm text-[#053E43]/80 leading-relaxed">
+                <p className="italic text-xs sm:text-sm text-[#053E43]/80 leading-relaxed">
                   "{review.text}"
                 </p>
-                <div className="pt-4 border-t border-[#053E43]/5">
-                  <p className="text-sm uppercase tracking-widest text-[#053E43]">
+                <div className="pt-3 sm:pt-4 border-t border-[#053E43]/5">
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-[#053E43]">
                     {review.author}
                   </p>
                   <p className="text-xs text-[#053E43]/60">

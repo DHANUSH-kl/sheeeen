@@ -47,60 +47,71 @@ details > summary::-webkit-details-marker {
 }
 
 /* Animations */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-.animate-marquee {
-  animation: marquee 40s linear infinite;
 }
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-.animate-scroll {
-  animation: scroll 40s linear infinite;
-}
-
 .clip-diagonal {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
+/* Marquee Animations - Responsive speeds */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-@keyframes testimonial-marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
+@keyframes marquee-mobile {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Base marquee class */
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+/* Responsive speeds */
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation: marquee-mobile 30s linear infinite;
   }
 }
 
-/* HARD lock to horizontal row */
-.testimonial-marquee {
-  display: inline-flex;              /* 👈 NOT flex */
-  flex-direction: row;               /* 👈 FORCE ROW */
-  align-items: stretch;
-  white-space: nowrap;               /* 👈 NO WRAP EVER */
-  width: max-content;
-  animation: testimonial-marquee 35s linear infinite;
-}
-
-.testimonial-marquee:hover {
+/* Marquee hover pause */
+.animate-marquee:hover {
   animation-play-state: paused;
 }
 
 
+/* Add to your globals.css */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
+/* Responsive marquee speeds */
+@media (max-width: 768px) {
+  .animate-\[marquee_20s_linear_infinite\] {
+    animation: marquee 15s linear infinite;
+  }
+}
+
+@media (min-width: 769px) {
+  .animate-\[marquee_20s_linear_infinite\] {
+    animation: marquee 25s linear infinite;
+  }
+}
+
+.animate-\[marquee_20s_linear_infinite\]:hover {
+  animation-play-state: paused;
+}
