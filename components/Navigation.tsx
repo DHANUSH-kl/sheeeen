@@ -68,7 +68,7 @@ export default function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="font-['Oswald'] text-[10px] uppercase tracking-[0.25em] text-white/70 hover:text-[#2DD4BF] transition-all duration-300 relative group"
+                className="font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.25em] text-white/70 hover:text-[#2DD4BF] transition-all duration-300 relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#2DD4BF] transition-all duration-300 group-hover:w-full" />

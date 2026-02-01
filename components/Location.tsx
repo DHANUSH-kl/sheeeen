@@ -91,6 +91,7 @@ export default function Location() {
                 href="https://maps.app.goo.gl/ocxAWwzPk37TsmKF9"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Find SHEEEEN Detailing Studio on Google Maps"
                 className="group block border border-[#053E43]/10 rounded-2xl overflow-hidden relative shadow-lg"
               >
                 <div className="absolute inset-0 z-10 bg-[#053E43]/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />

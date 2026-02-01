@@ -52,7 +52,7 @@ export default function Services() {
           </RevealOnScroll>
 
           <RevealOnScroll effect="fade-up" delay={0.2}>
-            <h2 className="font-['Oswald'] text-6xl sm:text-7xl font-bold uppercase tracking-tighter text-[#053E43] leading-[0.9]">
+            <h2 className="font-['Oswald'] text-6xl sm:text-7xl font-bold uppercase tracking-tighter text-[#053E43] leading-[1] px-1">
               Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E5F66] to-[#2DD4BF]">Services</span>
             </h2>
           </RevealOnScroll>
