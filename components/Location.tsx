@@ -1,103 +1,131 @@
+'use client';
+
+import RevealOnScroll from './RevealOnScroll';
+
 export default function Location() {
   return (
-    <section id="location" className="py-24 px-4 sm:px-8 bg-white">
+    <section id="location" className="py-24 px-4 sm:px-8 bg-white border-t border-[#053E43]/5">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#053E43]/60 block mb-3">
-            Our Location
-          </span>
-          <h2 className="text-4xl sm:text-5xl uppercase tracking-tighter text-[#053E43] mb-4">
-            Find Us In <span className="font-bold text-[#0E5F66]">Mysore</span>
-          </h2>
-          <p className="text-[#053E43]/60 max-w-2xl mx-auto">
-            Conveniently located in Mysore, Karnataka
-          </p>
+          <RevealOnScroll effect="fade-up">
+            <span className="font-['Oswald'] text-[10px] uppercase tracking-[0.25em] text-[#053E43]/60 block mb-3">
+              Our Location
+            </span>
+          </RevealOnScroll>
+          <RevealOnScroll effect="fade-up" delay={0.2}>
+            <h2 className="font-['Oswald'] text-4xl sm:text-6xl uppercase tracking-tighter text-[#053E43] mb-4 leading-[0.9]">
+              Find Us In <span className="font-bold text-[#0E5F66]">Mysore</span>
+            </h2>
+          </RevealOnScroll>
+          <RevealOnScroll effect="fade-up" delay={0.3}>
+            <p className="font-['DM_Sans'] text-[#053E43]/60 max-w-2xl mx-auto text-lg">
+              Conveniently located in Mysore, Karnataka
+            </p>
+          </RevealOnScroll>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
+
           {/* LEFT COLUMN */}
           <div className="space-y-8">
 
             {/* Address */}
-            <div className="border border-[#053E43]/10 rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-[#053E43] mb-3">
-                Studio Address
-              </h3>
-              <p className="text-[#053E43]/70 leading-relaxed">
-                Premium Car Detailing Studio<br />
-                Near Mysore Palace Area<br />
-                Mysore, Karnataka 570001
-              </p>
-            </div>
+            <RevealOnScroll effect="slide-right" delay={0.2} width="100%">
+              <div className="border border-[#053E43]/10 rounded-2xl p-8 hover:bg-[#FAFAFA] transition-colors duration-300">
+                <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-[#053E43] mb-4">
+                  Studio Address
+                </h3>
+                <p className="font-['DM_Sans'] text-[#053E43]/80 font-medium leading-relaxed">
+                  Premium Car Detailing Studio<br />
+                  Near Mysore Palace Area<br />
+                  Mysore, Karnataka 570001
+                </p>
+              </div>
+            </RevealOnScroll>
 
             {/* Working Hours */}
-            <div className="border border-[#053E43]/10 rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-[#053E43] mb-4">
-                Working Hours
-              </h3>
+            <RevealOnScroll effect="slide-right" delay={0.3} width="100%">
+              <div className="border border-[#053E43]/10 rounded-2xl p-8 hover:bg-[#FAFAFA] transition-colors duration-300">
+                <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-[#053E43] mb-4">
+                  Working Hours
+                </h3>
 
-              <div className="grid grid-cols-2 gap-y-3 text-sm text-[#053E43]/70">
-                <span>Monday – Saturday</span>
-                <span className="text-right font-medium text-[#053E43]">
-                  9:00 AM – 7:00 PM
-                </span>
+                <div className="grid grid-cols-2 gap-y-3 text-sm text-[#053E43]/70 font-['DM_Sans']">
+                  <span>Monday – Saturday</span>
+                  <span className="text-right font-bold text-[#053E43]">
+                    9:00 AM – 7:00 PM
+                  </span>
 
-                <span>Sunday</span>
-                <span className="text-right font-medium text-[#053E43]">
-                  10:00 AM – 5:00 PM
-                </span>
+                  <span>Sunday</span>
+                  <span className="text-right font-bold text-[#053E43]">
+                    10:00 AM – 5:00 PM
+                  </span>
+                </div>
               </div>
-            </div>
+            </RevealOnScroll>
 
             {/* Contact */}
-            <div className="border border-[#053E43]/10 rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-[#053E43] mb-2">
-                Contact Number
-              </h3>
-              <a
-                href="tel:9900447762"
-                className="text-lg font-medium text-[#053E43] hover:text-[#0E5F66] transition-colors"
-              >
-                +91 99004 47762
-              </a>
-            </div>
+            <RevealOnScroll effect="slide-right" delay={0.4} width="100%">
+              <div className="border border-[#053E43]/10 rounded-2xl p-8 hover:bg-[#FAFAFA] transition-colors duration-300">
+                <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-[#053E43] mb-2">
+                  Contact Number
+                </h3>
+                <a
+                  href="tel:9900447762"
+                  className="font-['Oswald'] text-2xl font-bold text-[#053E43] hover:text-[#2DD4BF] transition-colors tracking-wide"
+                >
+                  +91 99004 47762
+                </a>
+              </div>
+            </RevealOnScroll>
           </div>
 
           {/* RIGHT COLUMN */}
           <div className="space-y-6">
-            
-            {/* Map */}
-            <a
-              href="https://maps.app.goo.gl/ocxAWwzPk37TsmKF9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border border-[#053E43]/10 rounded-2xl overflow-hidden relative"
-            >
-              <iframe
-                src="https://www.google.com/maps?q=Mysore%20Palace%20Area&output=embed"
-                className="w-full h-[360px] grayscale group-hover:grayscale-0 transition-all"
-                loading="lazy"
-              />
 
-              <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                <span className="bg-white px-6 py-3 rounded-full text-sm font-medium text-[#053E43] shadow-lg">
-                  Open in Google Maps →
-                </span>
-              </div>
-            </a>
+            {/* Map */}
+            <RevealOnScroll effect="fade-in" delay={0.4} width="100%">
+              <a
+                href="https://maps.app.goo.gl/ocxAWwzPk37TsmKF9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block border border-[#053E43]/10 rounded-2xl overflow-hidden relative shadow-lg"
+              >
+                <div className="absolute inset-0 z-10 bg-[#053E43]/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+                <iframe
+                  src="https://www.google.com/maps?q=Mysore%20Palace%20Area&output=embed"
+                  className="w-full h-[400px] grayscale group-hover:grayscale-0 transition-all duration-700"
+                  loading="lazy"
+                />
+
+                <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-20 pointer-events-none">
+                  <span className="bg-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest text-[#053E43] shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    Open in Google Maps →
+                  </span>
+                </div>
+              </a>
+            </RevealOnScroll>
 
             {/* Parking Note */}
-            <div className="border border-[#053E43]/10 rounded-2xl p-6">
-              <p className="text-[#053E43] font-medium mb-1">
-                ✓ Ample Parking Available
-              </p>
-              <p className="text-sm text-[#053E43]/60">
-                Easy access from all parts of Mysore • Free consultation available
-              </p>
-            </div>
+            <RevealOnScroll effect="fade-up" delay={0.5} width="100%">
+              <div className="border border-[#053E43]/10 rounded-2xl p-6 bg-[#F0FDFA]/50 flex items-center gap-4">
+                <div className="h-10 w-10 rounded-full bg-[#053E43]/10 flex items-center justify-center text-[#053E43]">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[#053E43] font-bold uppercase tracking-wider text-sm mb-0.5 font-['Oswald']">
+                    Ample Parking Available
+                  </p>
+                  <p className="text-xs text-[#053E43]/60 font-medium font-['DM_Sans']">
+                    Easy access from all parts of Mysore • Free consultation available
+                  </p>
+                </div>
+              </div>
+            </RevealOnScroll>
           </div>
         </div>
       </div>

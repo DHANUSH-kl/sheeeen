@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -11,10 +12,10 @@ export default function Services() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024); // lg breakpoint
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -37,35 +38,25 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="bg-[#F0FDFA] px-4 py-24 sm:px-8 overflow-hidden">
-      <div className="mx-auto max-w-7xl">
+    <section id="services" className="bg-[#FAFAFA] px-4 py-24 sm:px-8 overflow-hidden relative">
+      {/* Background Texture */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%221%22/%3E%3C/svg%3E")' }} />
+
+      <div className="mx-auto max-w-7xl relative z-10 w-full">
         {/* Section Header with animation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 flex flex-col items-center text-center"
-        >
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.25em] text-[#053E43]/60"
-          >
-            What We Do
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-3 font-['Oswald'] text-5xl sm:text-6xl font-medium uppercase tracking-tighter text-[#053E43]"
-          >
-            Core <span className="italic font-normal text-[#0E5F66]">Services</span>
-          </motion.h2>
-        </motion.div>
+        <div className="mb-20 flex flex-col items-center text-center">
+          <RevealOnScroll effect="fade-up">
+            <span className="font-['Oswald'] text-xs font-bold uppercase tracking-[0.25em] text-[#053E43]/60 mb-3 block">
+              What We Do
+            </span>
+          </RevealOnScroll>
+
+          <RevealOnScroll effect="fade-up" delay={0.2}>
+            <h2 className="font-['Oswald'] text-6xl sm:text-7xl font-bold uppercase tracking-tighter text-[#053E43] leading-[0.9]">
+              Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E5F66] to-[#2DD4BF]">Services</span>
+            </h2>
+          </RevealOnScroll>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -74,112 +65,112 @@ export default function Services() {
               key={index}
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
-                duration: 0.8, 
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{
+                duration: 0.8,
                 delay: index * 0.2,
-                ease: [0.22, 1, 0.36, 1] 
+                ease: [0.22, 1, 0.36, 1]
               }}
-              className="group relative h-[500px] lg:h-[600px] w-full overflow-hidden rounded-[2rem] bg-[#02282C] cursor-pointer"
+              className="group relative h-[550px] lg:h-[700px] w-full overflow-hidden rounded-[2.5rem] bg-[#02282C] cursor-pointer shadow-2xl shadow-[#053E43]/10"
               onMouseEnter={() => !isMobile && setHoveredIndex(index)}
               onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-              whileHover={{ 
-                y: !isMobile ? -5 : 0,
-                transition: { duration: 0.3, ease: "easeOut" }
+              whileHover={{
+                y: !isMobile ? -8 : 0,
+                transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
               }}
             >
               {/* Image Background with animation */}
               <motion.div
                 initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out lg:group-hover:scale-105"
+                animate={{ scale: hoveredIndex === index && !isMobile ? 1.05 : 1 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out"
                 style={{ backgroundImage: `url(${service.img})` }}
               />
-              
-              {/* Dark Overlay - Darkens on hover (desktop only) */}
-              <div className={`absolute inset-0 bg-gradient-to-t from-[#02282C] via-[#02282C]/60 to-transparent transition-all duration-500 ${
-                (!isMobile && hoveredIndex === index) ? 'from-[#02282C]/90 via-[#02282C]/80' : ''
-              }`} />
-              
-              {/* Content - Using flex-col justify-end to push everything to bottom */}
-              <div className="absolute inset-0 p-6 lg:p-10 flex flex-col justify-end">
-                {/* Title with animation - All titles at same level */}
+
+              {/* Enhanced Gradient Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t from-[#02282C] via-[#02282C]/50 to-transparent transition-all duration-700 ${(!isMobile && hoveredIndex === index) ? 'opacity-90 from-[#02282C] via-[#02282C]/80' : 'opacity-80'
+                }`} />
+
+              {/* Content */}
+              <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end">
+                {/* Title */}
                 <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 + index * 0.2 }}
-                  className="font-['Oswald'] text-4xl md:text-5xl lg:text-6xl font-medium uppercase text-white tracking-tight mb-4"
+                  className="font-['Oswald'] text-5xl md:text-6xl lg:text-7xl font-bold uppercase text-white tracking-tighter mb-6 leading-[0.9]"
+                  animate={{ y: shouldShowDescription(index) ? 0 : 20 }}
+                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {service.title}
                 </motion.h3>
-                
-                {/* Description - Always shown on mobile, on hover for desktop */}
+
+                {/* Description */}
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{
-                    height: 'auto',
-                    opacity: 1
+                    height: shouldShowDescription(index) ? 'auto' : 0,
+                    opacity: shouldShowDescription(index) ? 1 : 0
                   }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : undefined }}
+                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
                   {/* Accent Line */}
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: 48 }}
-                    transition={{ duration: 0.4, delay: isMobile ? 0 : (shouldShowDescription(index) ? 0.1 : 0) }}
-                    className="h-px bg-[#2DD4BF] mb-4"
-                  />
-                  
+                  <div className="h-[2px] w-12 bg-[#2DD4BF] mb-6" />
+
                   {/* Description Text */}
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ 
-                      opacity: 1,
-                      y: 0
-                    }}
-                    transition={{ duration: 0.4, delay: isMobile ? 0 : (shouldShowDescription(index) ? 0.2 : 0) }}
-                    className="font-['DM_Sans'] text-sm text-white/80 leading-relaxed"
-                  >
+                  <p className="font-['DM_Sans'] text-lg text-white/90 leading-relaxed max-w-xl">
                     {service.desc}
-                  </motion.p>
+                  </p>
                 </motion.div>
               </div>
-              
-              {/* Service Number - Moved to top right corner */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.2 }}
-                className="absolute top-6 lg:top-10 right-6 lg:right-10"
-              >
-                <span className="font-['Oswald'] text-5xl lg:text-6xl text-white/10 font-bold">
+
+              {/* Service Number */}
+              <div className="absolute top-8 right-8 lg:top-12 lg:right-12 mix-blend-overlay">
+                <span className="font-['Oswald'] text-6xl lg:text-8xl text-white/20 font-bold tracking-tighter">
                   0{index + 1}
                 </span>
+              </div>
+
+              {/* Arrow Indicator (visible on hover) */}
+              <motion.div
+                className="absolute top-8 right-8 lg:top-12 lg:right-12 text-white bg-white/10 backdrop-blur-md p-4 rounded-full border border-white/20 opacity-0 transform translate-x-4 -translate-y-4"
+                animate={{
+                  opacity: shouldShowDescription(index) ? 1 : 0,
+                  x: shouldShowDescription(index) ? 0 : 20,
+                  y: shouldShowDescription(index) ? 0 : -20
+                }}
+                transition={{ duration: 0.4 }}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </motion.div>
+
             </motion.div>
           ))}
         </div>
 
-        {/* CTA Below Services with animation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 text-center"
-        >
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            href="tel:9900447762" 
-            className="inline-flex items-center gap-2 rounded-full bg-[#053E43] px-8 py-3 font-['Oswald'] text-xs font-bold uppercase tracking-widest text-white shadow-lg"
+        {/* CTA Below Services */}
+        <RevealOnScroll effect="fade-up" delay={0.4} width="100%" className="mt-20 text-center">
+          <a
+            href="tel:9900447762"
+            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[#053E43] px-10 py-4 font-['Oswald'] text-sm font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#02282C] shadow-xl hover:shadow-[#053E43]/20"
           >
-            <span>Call Now</span>
-           
-          </motion.a>
-        </motion.div>
+            <span className="relative z-10">Book an Appointment</span>
+            <div className="relative z-10 w-4 h-4 overflow-hidden">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-full transform transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <div className="absolute inset-0 bg-[#2DD4BF] transform translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+          </a>
+        </RevealOnScroll>
       </div>
     </section>
   );

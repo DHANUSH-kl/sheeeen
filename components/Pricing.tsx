@@ -50,19 +50,19 @@ export default function Pricing() {
       className="bg-gradient-to-b from-white to-[#F0FDFA] py-28 px-4 sm:px-8"
     >
       <div className="mx-auto max-w-6xl">
-        
+
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <span className="font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.25em] text-[#053E43]/60 mb-3">
             Simple & Transparent
           </span>
-          <h2 className="font-['Oswald'] text-5xl sm:text-6xl uppercase tracking-tighter text-[#053E43] mb-4">
+          <h2 className="font-['Oswald'] text-5xl sm:text-6xl font-bold uppercase tracking-tighter text-[#053E43] mb-4">
             Service{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#053E43] to-[#0E5F66]">
               Pricing
             </span>
           </h2>
-          <p className="text-[#053E43]/60 max-w-2xl text-lg">
+          <p className="text-[#053E43]/60 max-w-2xl text-lg font-medium">
             Two comprehensive packages. Everything you need for a showroom finish.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function Pricing() {
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
               className={`relative rounded-2xl overflow-hidden border-2 ${service.popular ? 'border-[#053E43] shadow-2xl' : 'border-[#053E43]/20'} bg-white transition-all duration-300 hover:shadow-xl hover:scale-[1.02]`}
             >
@@ -79,13 +79,13 @@ export default function Pricing() {
                   Most Popular
                 </div>
               )}
-              
+
               <div className="p-8">
                 {/* Service Title */}
                 <h3 className="font-['Oswald'] text-2xl uppercase tracking-tight text-[#053E43] mb-4">
                   {service.title}
                 </h3>
-                
+
                 {/* Price */}
                 <div className="mb-8">
                   <div className={`text-4xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
@@ -93,31 +93,31 @@ export default function Pricing() {
                   </div>
                   <p className="text-sm text-[#053E43]/60 mt-1">One-time service</p>
                 </div>
-                
+
                 {/* Features List */}
                 <div className="space-y-4 mb-8">
                   {service.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <svg 
-                        className="w-5 h-5 text-[#0E5F66] flex-shrink-0 mt-0.5" 
-                        fill="none" 
-                        stroke="currentColor" 
+                      <svg
+                        className="w-5 h-5 text-[#0E5F66] flex-shrink-0 mt-0.5"
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth="2.5" 
-                          d="M5 13l4 4L19 7" 
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="3"
+                          d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-[#053E43]/80">{feature}</span>
+                      <span className="text-[#053E43]/90 font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
-                
+
                 {/* CTA Button - Opens WhatsApp */}
-                <button 
+                <button
                   onClick={() => handleWhatsAppClick(service.whatsappMessage)}
                   className={`w-full py-3 px-6 rounded-lg font-bold uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 ${service.popular ? 'bg-gradient-to-r from-[#053E43] to-[#0E5F66] text-white hover:shadow-lg hover:scale-[1.02]' : 'bg-[#053E43]/10 text-[#053E43] hover:bg-[#053E43]/20'}`}
                 >

@@ -37,7 +37,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-28 px-4 sm:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-[10px] uppercase tracking-[0.25em] text-[#053E43]/60 block mb-3">
@@ -55,25 +55,25 @@ export default function FAQ() {
         {/* FAQ Grid */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <details 
-              key={index} 
+            <details
+              key={index}
               className="group bg-white border border-[#053E43]/10 rounded-2xl p-6 hover:border-[#053E43]/30 transition-colors"
             >
               <summary className="flex items-center justify-between cursor-pointer list-none">
-                <span className="text-lg font-medium text-[#053E43] group-open:text-[#0E5F66] pr-8">
+                <span className="text-lg font-bold text-[#053E43] group-open:text-[#0E5F66] pr-8">
                   {faq.question}
                 </span>
-                <svg 
+                <svg
                   className="w-6 h-6 text-[#0E5F66] flex-shrink-0 transform group-open:rotate-180 transition-transform"
-                  fill="none" 
-                  stroke="currentColor" 
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="mt-4 pt-4 border-t border-[#053E43]/10">
-                <p className="text-[#053E43]/70 leading-relaxed">
+                <p className="text-[#053E43]/80 font-medium leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -88,7 +88,7 @@ export default function FAQ() {
               <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
               <p className="opacity-90">Our team is ready to assist you</p>
             </div>
-            <a 
+            <a
               href="tel:9900447762"
               className="inline-flex h-12 items-center rounded-full bg-white text-[#053E43] px-8 text-sm font-bold uppercase tracking-widest hover:bg-[#F0FDFA] transition-colors"
             >
