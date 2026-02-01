@@ -41,6 +41,103 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "SHEEEEN Detailing Studio",
+      "image": "https://sheen.co.in/logo.png",
+      "url": "https://sheen.co.in/",
+      "telephone": "+919900447762",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mysore",
+        "addressLocality": "Mysore",
+        "addressRegion": "Karnataka",
+        "postalCode": "570001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.2958,
+        "longitude": 76.6394
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sheeen.detailing/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Car Detailing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Wash Package",
+              "description": "Professional multi-stage car wash with pH-neutral snow foam, wheel cleaning, and interior vacuuming."
+            },
+            "price": "999",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Complete Detailing Package",
+              "description": "Full restorative detailing including machine polishing, interior steam cleaning, and ceramic protection."
+            },
+            "price": "3000",
+            "priceCurrency": "INR"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a typical detailing service take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basic wash takes 1-2 hours. Complete detailing packages require 4-6 hours. Ceramic coating can take 1-2 days for proper curing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to book an appointment in advance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we operate by appointment only to ensure dedicated time and attention for your vehicle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does ceramic coating last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our ceramic coatings last 3-5 years with proper maintenance."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({
@@ -61,6 +158,10 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="font-['DM_Sans'] antialiased overflow-x-hidden selection:bg-[#053E43] selection:text-white">

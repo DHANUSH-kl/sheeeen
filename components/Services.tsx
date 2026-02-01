@@ -79,13 +79,14 @@ export default function Services() {
                 transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
               }}
             >
-              {/* Image Background with animation */}
-              <motion.div
+              {/* Image Background with Alt Text for SEO */}
+              <motion.img
                 initial={{ scale: 1.1 }}
                 animate={{ scale: hoveredIndex === index && !isMobile ? 1.05 : 1 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out"
-                style={{ backgroundImage: `url(${service.img})` }}
+                src={service.img}
+                alt={`${service.title} - SHEEEEN Detailing Mysore`}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out"
               />
 
               {/* Enhanced Gradient Overlay */}
