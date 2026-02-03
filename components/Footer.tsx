@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand & Description */}
           <div className="md:col-span-2 space-y-6">
             <RevealOnScroll effect="fade-up" delay={0.1}>
-              <h2 className="font-['Oswald'] text-3xl font-bold tracking-tighter text-white mb-2">SHEEEEN</h2>
+              <h2 className="font-['Oswald'] text-3xl font-bold tracking-tighter text-white mb-2">SHEEN</h2>
             </RevealOnScroll>
             <RevealOnScroll effect="fade-up" delay={0.2}>
               <p className="font-['DM_Sans'] text-white/60 font-medium text-base leading-relaxed max-w-sm">

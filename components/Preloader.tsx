@@ -56,7 +56,7 @@ export default function Preloader() {
                                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                                 className="font-['Oswald'] text-7xl md:text-9xl font-bold tracking-tighter text-white uppercase relative z-10"
                             >
-                                SHEEEEN
+                                SHEEN
                             </motion.h1>
 
                             {/* Sine effect sweep (Liquid Shine) */}
