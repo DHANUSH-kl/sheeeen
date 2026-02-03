@@ -68,26 +68,23 @@ export default function Navigation() {
     <>
       {/* NAVBAR */}
       <header
-        className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-500 ${
-          scrolled ? 'py-3' : 'py-6'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-500 ${scrolled ? 'py-3' : 'py-6'
+          }`}
       >
         <nav className="mx-auto max-w-7xl px-6">
           <div
-            className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border ${
-              scrolled
+            className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border ${scrolled
                 ? 'bg-[#053E43]/80 backdrop-blur-xl border-white/10 shadow-2xl'
                 : 'bg-transparent border-transparent'
-            }`}
+              }`}
           >
             {/* Logo */}
             <a href="#" className="relative z-[120]">
               <img
                 src="/logo.png"
-                alt="SHEEEEN Logo"
-                className={`transition-all duration-500 ${
-                  scrolled ? 'h-6 md:h-8' : 'h-8 md:h-10'
-                }`}
+                alt="Sheen Logo"
+                className={`transition-all duration-500 ${scrolled ? 'h-6 md:h-8' : 'h-8 md:h-10'
+                  }`}
               />
             </a>
 

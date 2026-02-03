@@ -3,21 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sheen.co.in/'),
-  title: "SHEEEEN | Premium Car Detailing & Wash Studio in Mysore",
-  description: "Experience Mysore's finest automotive care. SHEEEEN specializes in premium ceramic coating, paint correction, interior detailing, and high-end car wash services. Est. 2024.",
-  keywords: ["car detailing mysore", "ceramic coating mysore", "car wash mysore", "paint correction mysore", "premium car detailing", "SHEEEEN detailing"],
-  authors: [{ name: "SHEEEEN Detailing Studio" }],
+  title: "Sheen | Premium Car Detailing & Wash Studio in Mysore",
+  description: "Experience Mysore's finest automotive care. Sheen specializes in premium ceramic coating, paint correction, interior detailing, and high-end car wash services. Est. 2024.",
+  keywords: ["car detailing mysore", "ceramic coating mysore", "car wash mysore", "paint correction mysore", "premium car detailing", "sheen detailing"],
+  authors: [{ name: "Sheen Detailing Studio" }],
   openGraph: {
-    title: "SHEEEEN | Premium Car Detailing Mysore",
+    title: "Sheen | Premium Car Detailing Mysore",
     description: "Transform your vehicle with Mysore's premier detailing studio. Precision, chemistry, and craftsmanship.",
     url: "https://sheen.co.in/", // Adjust to actual URL
-    siteName: "SHEEEEN Detailing",
+    siteName: "Sheen Detailing",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "SHEEEEN Detailing Studio Logo",
+        alt: "Sheen Detailing Studio Logo",
       },
     ],
     locale: "en_IN",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SHEEEEN | Premium Car Detailing Mysore",
+    title: "Sheen | Premium Car Detailing Mysore",
     description: "Premium automotive care and detailing services in Mysore.",
     images: ["/logo.png"],
   },
@@ -46,7 +46,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "name": "SHEEEEN Detailing Studio",
+      "name": "Sheen Detailing Studio",
       "image": "https://sheen.co.in/logo.png",
       "url": "https://sheen.co.in/",
       "telephone": "+919900447762",

@@ -29,7 +29,7 @@ export default function Hero() {
 
         {/* Main Title */}
         <div className="text-center mb-8 relative">
-          <h1 className="sr-only">SHEEEEN Detailing Mysore - Detail Defined</h1>
+          <h1 className="sr-only">Sheen Detailing Mysore - Detail Defined</h1>
           <div className="overflow-hidden">
             <motion.div
               initial={{ y: 100, opacity: 0 }}

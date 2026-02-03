@@ -85,7 +85,7 @@ export default function Services() {
                 animate={{ scale: hoveredIndex === index && !isMobile ? 1.05 : 1 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 src={service.img}
-                alt={`${service.title} - SHEEEEN Detailing Mysore`}
+                alt={`${service.title} - Sheen Detailing Mysore`}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out"
               />
 
