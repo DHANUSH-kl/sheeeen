@@ -77,7 +77,7 @@ const jsonLd = {
         "closes": "21:00"
       },
       "sameAs": [
-        "https://www.instagram.com/sheeen.detailing/"
+        "https://www.instagram.com/sheen.detailing/"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

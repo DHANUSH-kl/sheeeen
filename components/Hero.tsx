@@ -35,10 +35,10 @@ export default function Hero() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="font-['Oswald'] text-7xl md:text-9xl lg:text-[11rem] font-bold tracking-tighter text-white leading-[0.85] select-none"
+              className="font-['Oswald'] text-7xl md:text-9xl lg:text-[11rem] font-bold tracking-tight text-white leading-[0.85] select-none"
               aria-hidden="true"
             >
-              DETAIL
+              DETAILED
             </motion.div>
           </div>
 
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="font-['Oswald'] text-7xl md:text-9xl lg:text-[11rem] font-bold tracking-tighter bg-gradient-to-b from-white via-white/90 to-white/70 bg-clip-text text-transparent leading-[0.85] select-none"
+              className="font-['Oswald'] text-7xl md:text-9xl lg:text-[11rem] font-bold tracking-tight bg-gradient-to-b from-white via-white/90 to-white/70 bg-clip-text text-transparent leading-[0.85] select-none"
               aria-hidden="true"
             >
               DEFINED
