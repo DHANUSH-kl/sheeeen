@@ -3,42 +3,41 @@
 export default function Pricing() {
   const services = [
     {
-      title: "Premium Wash Package",
-      price: "₹999",
+      title: "SHEEN Refresh Package",
+      price: "₹1,200",
       features: [
-        "Snow foam pre-wash & pressure rinse",
+        "Two step exterior wash (Pre-wash + Foam wash)",
         "Two-bucket contact wash (safe wash method)",
         "Wheels & tire deep clean",
-        "Spray sealant for hydrophobic protection",
         "Tire dressing for shine",
         "Interior vacuum & dash wipe",
         "Glass cleaning inside & out"
       ],
       popular: false,
       color: "from-[#053E43] to-[#0E5F66]",
-      whatsappMessage: "Hello, I'd like to book the Premium Wash Package (₹999). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the SHEEN Refresh Package (₹1200). Please let me know available slots."
     },
     {
-      title: "Complete Detailing Package",
-      price: "₹3,000",
+      title: "SHEEN Signature",
+      price: "₹4,000",
       features: [
         "Everything in Premium Wash",
         "Machine polishing for gloss enhancement",
-        "Light swirl & scratch removal",
+        "Light swirl removal",
         "Full interior steam cleaning",
         "Leather conditioning & protection",
         "Engine bay detailing",
-        "Ceramic spray coating application",
+        "Minor scratch removal (T&C apply)",
         "Paint iron decontamination"
       ],
       popular: true,
       color: "from-[#02282C] to-[#053E43]",
-      whatsappMessage: "Hello, I'd like to book the Complete Detailing Package (₹3000). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the SHEEN Signature (₹4000). Please let me know available slots."
     }
   ];
 
   const handleWhatsAppClick = (message: string) => {
-    const phoneNumber = "9900447762";
+    const phoneNumber = "7795469375";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

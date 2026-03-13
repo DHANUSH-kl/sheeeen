@@ -19,11 +19,6 @@ export default function Location() {
               Find Us In <span className="font-bold text-[#0E5F66]">Mysore</span>
             </h2>
           </RevealOnScroll>
-          <RevealOnScroll effect="fade-up" delay={0.3}>
-            <p className="font-['DM_Sans'] text-[#053E43]/60 max-w-2xl mx-auto text-lg">
-              Conveniently located in Mysore, Karnataka
-            </p>
-          </RevealOnScroll>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -35,13 +30,8 @@ export default function Location() {
             <RevealOnScroll effect="slide-right" delay={0.2} width="100%">
               <div className="border border-[#053E43]/10 rounded-2xl p-8 hover:bg-[#FAFAFA] transition-colors duration-300">
                 <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-[#053E43] mb-4">
-                  Studio Address
+                  At your location At your convenience
                 </h3>
-                <p className="font-['DM_Sans'] text-[#053E43]/80 font-medium leading-relaxed">
-                  Premium Car Detailing Studio<br />
-                  Near Mysore Palace Area<br />
-                  Mysore, Karnataka 570001
-                </p>
               </div>
             </RevealOnScroll>
 
@@ -53,14 +43,9 @@ export default function Location() {
                 </h3>
 
                 <div className="grid grid-cols-2 gap-y-3 text-sm text-[#053E43]/70 font-['DM_Sans']">
-                  <span>Monday – Saturday</span>
+                  <span>Monday – Sunday</span>
                   <span className="text-right font-bold text-[#053E43]">
-                    9:00 AM – 7:00 PM
-                  </span>
-
-                  <span>Sunday</span>
-                  <span className="text-right font-bold text-[#053E43]">
-                    10:00 AM – 5:00 PM
+                    6:00 AM – 6:00 PM
                   </span>
                 </div>
               </div>
@@ -73,10 +58,10 @@ export default function Location() {
                   Contact Number
                 </h3>
                 <a
-                  href="tel:9900447762"
+                  href="tel:7795469375"
                   className="font-['Oswald'] text-2xl font-bold text-[#053E43] hover:text-[#2DD4BF] transition-colors tracking-wide"
                 >
-                  +91 99004 47762
+                  +91 77954 69375
                 </a>
               </div>
             </RevealOnScroll>

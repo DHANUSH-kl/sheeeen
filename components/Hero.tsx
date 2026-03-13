@@ -22,7 +22,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DD4BF]"></span>
             </span>
             <span className="font-['Oswald'] text-xs font-semibold tracking-[0.2em] text-white/90 uppercase">
-              Mysore's Premier Studio
+              India's First Elite Detailing
             </span>
           </div>
         </RevealOnScroll>
@@ -63,7 +63,7 @@ export default function Hero() {
             </p>
             <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-[#2DD4BF]/50" />
             <p className="font-['DM_Sans'] text-base md:text-lg font-medium text-white/80 tracking-widest uppercase">
-              Est. 2024
+              Est. 2025
             </p>
           </div>
         </RevealOnScroll>

@@ -74,8 +74,8 @@ export default function Navigation() {
         <nav className="mx-auto max-w-7xl px-6">
           <div
             className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border ${scrolled
-                ? 'bg-[#053E43]/80 backdrop-blur-xl border-white/10 shadow-2xl'
-                : 'bg-transparent border-transparent'
+              ? 'bg-[#053E43]/80 backdrop-blur-xl border-white/10 shadow-2xl'
+              : 'bg-transparent border-transparent'
               }`}
           >
             {/* Logo */}
@@ -105,7 +105,7 @@ export default function Navigation() {
             {/* Desktop Call Button */}
             <div className="hidden lg:block">
               <a
-                href="tel:9900447762"
+                href="tel:7795469375"
                 className="relative overflow-hidden rounded-full bg-white px-8 py-2.5 font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.15em] text-[#053E43] transition-all duration-300 hover:scale-105 active:scale-95 group inline-flex items-center"
               >
                 <span className="relative z-10">Call Now</span>
@@ -169,7 +169,7 @@ export default function Navigation() {
                 {/* SAME Call Button (Mobile) */}
                 <motion.div variants={itemVariants} className="mt-10">
                   <a
-                    href="tel:9900447762"
+                    href="tel:7795469375"
                     className="relative overflow-hidden rounded-full bg-white px-10 py-4 font-['Oswald'] text-[12px] font-bold uppercase tracking-[0.15em] text-[#053E43] transition-all duration-300 active:scale-95 group inline-flex items-center"
                   >
                     <span className="relative z-10">Call Now</span>

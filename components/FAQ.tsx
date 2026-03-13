@@ -9,12 +9,8 @@ export default function FAQ() {
       answer: "Yes, we operate by appointment only to ensure dedicated time and attention for your vehicle. Bookings can be made via phone or WhatsApp."
     },
     {
-      question: "How long does ceramic coating last?",
-      answer: "Our ceramic coatings last 3-5 years with proper maintenance. We provide aftercare guidance to maximize protection."
-    },
-    {
       question: "Do you offer pick-up and drop service?",
-      answer: "Yes, we offer complimentary pick-up and drop service within Mysore city limits for detailing packages."
+      answer: "No, we currently do not offer pick-up and drop services."
     },
     {
       question: "What payment methods do you accept?",
@@ -27,10 +23,6 @@ export default function FAQ() {
     {
       question: "Do you work on all car types?",
       answer: "Yes, we service all car types including luxury vehicles, SUVs, hatchbacks, and motorcycles."
-    },
-    {
-      question: "What's included in the wash package?",
-      answer: "Our ₹999 wash includes exterior wash, wheel cleaning, interior vacuum, dash wipe, and glass cleaning inside and out."
     }
   ];
 
@@ -89,10 +81,10 @@ export default function FAQ() {
               <p className="opacity-90">Our team is ready to assist you</p>
             </div>
             <a
-              href="tel:9900447762"
+              href="tel:7795469375"
               className="inline-flex h-12 items-center rounded-full bg-white text-[#053E43] px-8 text-sm font-bold uppercase tracking-widest hover:bg-[#F0FDFA] transition-colors"
             >
-              Call Now: 9900447762
+              Call Now: 7795469375
             </a>
           </div>
         </div>

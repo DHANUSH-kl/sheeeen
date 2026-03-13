@@ -49,7 +49,7 @@ const jsonLd = {
       "name": "Sheen Detailing Studio",
       "image": "https://sheen.co.in/logo.png",
       "url": "https://sheen.co.in/",
-      "telephone": "+919900447762",
+      "telephone": "+917795469375",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mysore",
@@ -71,13 +71,14 @@ const jsonLd = {
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday"
+          "Saturday",
+          "Sunday"
         ],
-        "opens": "09:00",
-        "closes": "21:00"
+        "opens": "06:00",
+        "closes": "18:00"
       },
       "sameAs": [
-        "https://www.instagram.com/sheen.detailing/"
+        "https://www.instagram.com/sheen.co.in_?igsh=MTNsZGFyaXFkdzlrZw=="
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
