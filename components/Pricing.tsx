@@ -37,7 +37,7 @@ export default function Pricing() {
   ];
 
   const handleWhatsAppClick = (message: string) => {
-    const phoneNumber = "7795469375";
+    const phoneNumber = "8660010700";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

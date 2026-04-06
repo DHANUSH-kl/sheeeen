@@ -153,7 +153,7 @@ export default function Services() {
         {/* CTA Below Services */}
         <RevealOnScroll effect="fade-up" delay={0.4} width="100%" className="mt-20 text-center">
           <a
-            href="tel:7795469375"
+            href="tel:8660010700"
             className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[#053E43] px-10 py-4 font-['Oswald'] text-sm font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#02282C] shadow-xl hover:shadow-[#053E43]/20"
           >
             <span className="relative z-10">Book an Appointment</span>

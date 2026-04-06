@@ -49,7 +49,7 @@ const jsonLd = {
       "name": "Sheen Detailing Studio",
       "image": "https://sheen.co.in/logo.png",
       "url": "https://sheen.co.in/",
-      "telephone": "+917795469375",
+      "telephone": "+918660010700",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mysore",

@@ -81,10 +81,10 @@ export default function FAQ() {
               <p className="opacity-90">Our team is ready to assist you</p>
             </div>
             <a
-              href="tel:7795469375"
+              href="tel:8660010700"
               className="inline-flex h-12 items-center rounded-full bg-white text-[#053E43] px-8 text-sm font-bold uppercase tracking-widest hover:bg-[#F0FDFA] transition-colors"
             >
-              Call Now: 7795469375
+              Call Now: 8660010700
             </a>
           </div>
         </div>

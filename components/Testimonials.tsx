@@ -85,7 +85,7 @@ export default function Testimonials() {
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
 
           {/* Marquee with hover pause */}
-          <div className="flex animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused]">
+          <div className="flex animate-[marquee_12s_linear_infinite] hover:[animation-play-state:paused]">
             {/* Cards */}
             {track.map((review, i) => (
               <div

@@ -11,12 +11,12 @@ export default function Location() {
         <div className="text-center mb-16">
           <RevealOnScroll effect="fade-up">
             <span className="font-['Oswald'] text-[10px] uppercase tracking-[0.25em] text-[#053E43]/60 block mb-3">
-              Our Location
+              Service Area
             </span>
           </RevealOnScroll>
           <RevealOnScroll effect="fade-up" delay={0.2}>
             <h2 className="font-['Oswald'] text-4xl sm:text-6xl uppercase tracking-tighter text-[#053E43] mb-4 leading-[0.9]">
-              Find Us In <span className="font-bold text-[#0E5F66]">Mysore</span>
+              Serving <span className="font-bold text-[#0E5F66]">Mysore</span>
             </h2>
           </RevealOnScroll>
         </div>
@@ -32,6 +32,12 @@ export default function Location() {
                 <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-[#053E43] mb-4">
                   At your location At your convenience
                 </h3>
+                <p className="font-['DM_Sans'] text-sm text-[#053E43]/70 leading-relaxed mb-3">
+                  We are a fully mobile detailing service without a fixed physical studio.
+                </p>
+                <p className="font-['DM_Sans'] text-sm text-[#053E43]/70 leading-relaxed">
+                  We provide our services directly to your doorstep anywhere within an <strong>8km radius</strong> of Devegowda Circle, Mysore.
+                </p>
               </div>
             </RevealOnScroll>
 
@@ -58,10 +64,10 @@ export default function Location() {
                   Contact Number
                 </h3>
                 <a
-                  href="tel:7795469375"
+                  href="tel:8660010700"
                   className="font-['Oswald'] text-2xl font-bold text-[#053E43] hover:text-[#2DD4BF] transition-colors tracking-wide"
                 >
-                  +91 77954 69375
+                  +91 86600 10700
                 </a>
               </div>
             </RevealOnScroll>
@@ -73,7 +79,7 @@ export default function Location() {
             {/* Map */}
             <RevealOnScroll effect="fade-in" delay={0.4} width="100%">
               <a
-                href="https://maps.app.goo.gl/ocxAWwzPk37TsmKF9"
+                href="https://maps.app.goo.gl/search/Devegowda+Circle,+Mysuru"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Find Sheen Detailing Studio on Google Maps"
@@ -81,7 +87,7 @@ export default function Location() {
               >
                 <div className="absolute inset-0 z-10 bg-[#053E43]/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
                 <iframe
-                  src="https://www.google.com/maps?q=Mysore%20Palace%20Area&output=embed"
+                  src="https://www.google.com/maps?q=Devegowda%20Circle,%20Mysuru&output=embed"
                   className="w-full h-[400px] grayscale group-hover:grayscale-0 transition-all duration-700"
                   loading="lazy"
                 />
@@ -94,7 +100,7 @@ export default function Location() {
               </a>
             </RevealOnScroll>
 
-            {/* Parking Note */}
+            {/* Mobile Service Note */}
             <RevealOnScroll effect="fade-up" delay={0.5} width="100%">
               <div className="border border-[#053E43]/10 rounded-2xl p-6 bg-[#F0FDFA]/50 flex items-center gap-4">
                 <div className="h-10 w-10 rounded-full bg-[#053E43]/10 flex items-center justify-center text-[#053E43]">
@@ -104,10 +110,10 @@ export default function Location() {
                 </div>
                 <div>
                   <p className="text-[#053E43] font-bold uppercase tracking-wider text-sm mb-0.5 font-['Oswald']">
-                    Ample Parking Available
+                    Fully Mobile Service
                   </p>
                   <p className="text-xs text-[#053E43]/60 font-medium font-['DM_Sans']">
-                    Easy access from all parts of Mysore • Free consultation available
+                    We bring the detailing studio directly to your doorstep
                   </p>
                 </div>
               </div>
