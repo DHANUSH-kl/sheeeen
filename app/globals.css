@@ -97,45 +97,17 @@ details > summary::-webkit-details-marker {
 
 /* Base marquee class */
 .animate-marquee {
-  animation: marquee 60s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 /* Responsive speeds */
 @media (max-width: 768px) {
   .animate-marquee {
-    animation: marquee-mobile 30s linear infinite;
+    animation: marquee-mobile 5s linear infinite;
   }
 }
 
 /* Marquee hover pause */
 .animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-
-/* Add to your globals.css */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Responsive marquee speeds */
-@media (max-width: 768px) {
-  .animate-\[marquee_20s_linear_infinite\] {
-    animation: marquee 15s linear infinite;
-  }
-}
-
-@media (min-width: 769px) {
-  .animate-\[marquee_20s_linear_infinite\] {
-    animation: marquee 25s linear infinite;
-  }
-}
-
-.animate-\[marquee_20s_linear_infinite\]:hover {
   animation-play-state: paused;
 }
