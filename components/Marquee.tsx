@@ -12,7 +12,7 @@ export default function Marquee() {
           <div className="pointer-events-none absolute right-0 top-0 h-full w-32 md:w-64 bg-gradient-to-l from-[#F0FDFA] via-[#F0FDFA]/90 to-transparent z-10" />
 
           {/* Marquee Container */}
-          <div className="flex whitespace-nowrap py-10 md:py-12 animate-marquee hover:[animation-play-state:paused] will-change-transform items-center">
+          <div className="flex w-max whitespace-nowrap py-10 md:py-12 animate-marquee hover:[animation-play-state:paused] will-change-transform items-center">
             <MarqueeTrack />
             <MarqueeTrack />
             <MarqueeTrack />
