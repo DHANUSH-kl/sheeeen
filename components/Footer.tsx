@@ -44,11 +44,11 @@ export default function Footer() {
             </RevealOnScroll>
             <ul className="space-y-4 text-sm font-['DM_Sans']">
               {[
-                { name: 'Services', href: '#services' },
-                { name: 'Pricing', href: '#pricing' },
-                { name: 'About Us', href: '#about' },
+                { name: 'Services', href: '/#services' },
+                { name: 'Pricing', href: '/#pricing' },
+                { name: 'About Us', href: '/#about' },
                 { name: 'Blog', href: '/blog' },
-                { name: 'Contact Us', href: 'tel:8660010700' }
+                { name: 'Contact Us', href: '/contact' }
               ].map((link, i) => (
                 <RevealOnScroll key={i} effect="slide-right" delay={0.2 + (i * 0.05)} width="100%">
                   <li>

@@ -1,11 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isLightPage = pathname === '/contact';
 
   // Navbar scroll effect (disabled when menu is open)
   useEffect(() => {
@@ -33,11 +36,11 @@ export default function Navigation() {
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'About Us', href: '#about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Pricing', href: '/#pricing' },
+    { name: 'About Us', href: '/#about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact Us', href: 'tel:8660010700' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   const menuVariants = {
@@ -68,22 +71,22 @@ export default function Navigation() {
     <>
       {/* NAVBAR */}
       <header
-        className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-500 ${scrolled ? 'py-3' : 'py-6'
+        className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-500 ${(scrolled || isLightPage) ? 'py-3' : 'py-6'
           }`}
       >
         <nav className="mx-auto max-w-7xl px-6">
           <div
-            className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border ${scrolled
+            className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border ${(scrolled || isLightPage)
               ? 'bg-[#053E43]/80 backdrop-blur-xl border-white/10 shadow-2xl'
               : 'bg-transparent border-transparent'
               }`}
           >
             {/* Logo */}
-            <a href="#" className="relative z-[120]">
+            <a href="/" className="relative z-[120]">
               <img
                 src="/logo.png"
                 alt="Sheen Logo"
-                className={`transition-all duration-500 ${scrolled ? 'h-6 md:h-8' : 'h-8 md:h-10'
+                className={`transition-all duration-500 ${(scrolled || isLightPage) ? 'h-6 md:h-8' : 'h-8 md:h-10'
                   }`}
               />
             </a>
