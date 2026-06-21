@@ -3,7 +3,7 @@
 export default function Pricing() {
   const services = [
     {
-      title: "SHEEN Refresh Package",
+      title: "Sheen Refresh",
       price: "₹1,200",
       features: [
         "Two step exterior wash (Pre-wash + Foam wash)",
@@ -15,13 +15,13 @@ export default function Pricing() {
       ],
       popular: false,
       color: "from-[#053E43] to-[#0E5F66]",
-      whatsappMessage: "Hello, I'd like to book the SHEEN Refresh Package (₹1200). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the Sheen Refresh (₹1200). Please let me know available slots."
     },
     {
-      title: "SHEEN Signature",
-      price: "₹4,000",
+      title: "Sheen Signature",
+      price: "₹5,200",
       features: [
-        "Everything in Premium Wash",
+        "Everything in Sheen Refresh",
         "Machine polishing for gloss enhancement",
         "Light swirl removal",
         "Full interior steam cleaning",
@@ -32,7 +32,7 @@ export default function Pricing() {
       ],
       popular: true,
       color: "from-[#02282C] to-[#053E43]",
-      whatsappMessage: "Hello, I'd like to book the SHEEN Signature (₹4000). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the Sheen Signature (₹5200). Please let me know available slots."
     }
   ];
 
@@ -120,9 +120,6 @@ export default function Pricing() {
                   onClick={() => handleWhatsAppClick(service.whatsappMessage)}
                   className={`w-full py-3 px-6 rounded-lg font-bold uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 ${service.popular ? 'bg-gradient-to-r from-[#053E43] to-[#0E5F66] text-white hover:shadow-lg hover:scale-[1.02]' : 'bg-[#053E43]/10 text-[#053E43] hover:bg-[#053E43]/20'}`}
                 >
-                  {/* <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.892 0-3.18-1.24-6.162-3.495-8.411"/>
-                  </svg> */}
                   Book now
                 </button>
               </div>
@@ -130,13 +127,67 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Trust Note */}
-        {/* <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 text-sm text-[#053E43]/60">
-           
-            <span>Clicking "Book via WhatsApp" will open WhatsApp with a pre-written message</span>
+        {/* Loyalty & Monthly Plans Section */}
+        <div className="mt-28 border-t border-[#053E43]/10 pt-20">
+          <div className="text-center mb-16">
+            <span className="font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.25em] text-[#053E43]/60 mb-3 block">
+              Flexible Wash Options
+            </span>
+            <h3 className="font-['Oswald'] text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#053E43] mb-4">
+              Want regular washes without booking every single time?
+            </h3>
           </div>
-        </div> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Loyalty Card */}
+            <div className="relative rounded-2xl p-8 border border-[#053E43]/10 bg-white overflow-hidden shadow-sm flex flex-col justify-between">
+              <div className="absolute top-4 right-4 bg-[#053E43]/10 text-[#053E43] text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                Coming Soon
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">🟡</span>
+                  <h4 className="font-['Oswald'] text-xl uppercase tracking-tight text-[#053E43]">
+                    Loyalty Card
+                  </h4>
+                </div>
+                <p className="font-['DM_Sans'] text-sm text-[#053E43]/70 leading-relaxed">
+                  10 washes on one card, with 2 free exterior washes thrown in. No app, no fine print — just a card that pays for itself.
+                </p>
+              </div>
+            </div>
+
+            {/* Monthly Plans */}
+            <div className="relative rounded-2xl p-8 border border-[#053E43]/10 bg-white overflow-hidden shadow-sm flex flex-col justify-between">
+              <div className="absolute top-4 right-4 bg-[#053E43]/10 text-[#053E43] text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                Coming Soon
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">🟡</span>
+                  <h4 className="font-['Oswald'] text-xl uppercase tracking-tight text-[#053E43]">
+                    Monthly Plans
+                  </h4>
+                </div>
+                <div className="space-y-3">
+                  <p className="font-['DM_Sans'] text-sm text-[#053E43]/70 leading-relaxed">
+                    Set it and forget it — your car stays clean on schedule, every month.
+                  </p>
+                  <div className="border-t border-[#053E43]/5 pt-3 space-y-2">
+                    <div className="flex justify-between text-xs font-semibold uppercase text-[#053E43]/80 tracking-wider">
+                      <span>Basic Plan</span>
+                      <span>4 Washes/mo</span>
+                    </div>
+                    <div className="flex justify-between text-xs font-semibold uppercase text-[#053E43]/80 tracking-wider">
+                      <span>Signature Plan</span>
+                      <span>10 Washes/mo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

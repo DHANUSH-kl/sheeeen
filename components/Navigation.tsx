@@ -35,9 +35,9 @@ export default function Navigation() {
   const navLinks = [
     { name: 'Services', href: '#services' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'Location', href: '#location' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact Us', href: 'tel:8660010700' },
   ];
 
   const menuVariants = {
@@ -102,16 +102,6 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Desktop Call Button */}
-            <div className="hidden lg:block">
-              <a
-                href="tel:8660010700"
-                className="relative overflow-hidden rounded-full bg-white px-8 py-2.5 font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.15em] text-[#053E43] transition-all duration-300 hover:scale-105 active:scale-95 group inline-flex items-center"
-              >
-                <span className="relative z-10">Call Now</span>
-                <div className="absolute inset-0 bg-[#2DD4BF] transform translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
-              </a>
-            </div>
 
             {/* Mobile Hamburger / X */}
             <button
@@ -166,16 +156,6 @@ export default function Navigation() {
                   </motion.a>
                 ))}
 
-                {/* SAME Call Button (Mobile) */}
-                <motion.div variants={itemVariants} className="mt-10">
-                  <a
-                    href="tel:8660010700"
-                    className="relative overflow-hidden rounded-full bg-white px-10 py-4 font-['Oswald'] text-[12px] font-bold uppercase tracking-[0.15em] text-[#053E43] transition-all duration-300 active:scale-95 group inline-flex items-center"
-                  >
-                    <span className="relative z-10">Call Now</span>
-                    <div className="absolute inset-0 bg-[#2DD4BF] transform translate-y-full transition-transform duration-300 group-active:translate-y-0" />
-                  </a>
-                </motion.div>
 
                 {/* Footer Text */}
                 <motion.div

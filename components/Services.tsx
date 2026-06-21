@@ -21,13 +21,13 @@ export default function Services() {
 
   const services = [
     {
-      title: "WASH",
-      desc: "A meticulous multi-stage cleansing process. Using pH-neutral snow foams, two-bucket methods, and filtered air drying to ensure a scratch-free finish.",
+      title: "SHEEN REFRESH",
+      desc: "Your car's everyday refresh — a thorough wash and clean covering the dashboard, seats, mats, and a full exterior wash that leaves the paint looking sharp.",
       img: "https://res.cloudinary.com/di4nynvj6/image/upload/v1769380626/sheeeen/mintosko-V4b2j7f1dfc-unsplash_x8ufa9.jpg"
     },
     {
-      title: "CORRECTION & DETAILING",
-      desc: "Restorative treatments for your vehicle's paintwork. We remove swirl marks, scratches, and oxidation, followed by ceramic protection for enduring gloss.",
+      title: "SHEEN SIGNATURE",
+      desc: "A complete, hands-on detailing session for when your car needs more than a wash. Ideal every few months to keep it looking and feeling brand new.",
       img: "https://res.cloudinary.com/di4nynvj6/image/upload/v1769380614/sheeeen/deniz-demirci-4mUNFO4Kjyk-unsplash_pgc2fw.jpg"
     },
   ];
@@ -47,13 +47,13 @@ export default function Services() {
         <div className="mb-20 flex flex-col items-center text-center">
           <RevealOnScroll effect="fade-up">
             <span className="font-['Oswald'] text-xs font-bold uppercase tracking-[0.25em] text-[#053E43]/60 mb-3 block">
-              What We Do
+              Services
             </span>
           </RevealOnScroll>
 
           <RevealOnScroll effect="fade-up" delay={0.2}>
-            <h2 className="font-['Oswald'] text-6xl sm:text-7xl font-bold uppercase tracking-tighter text-[#053E43] leading-[1] px-1">
-              Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E5F66] to-[#2DD4BF]">Services</span>
+            <h2 className="font-['Oswald'] text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tighter text-[#053E43] leading-[1] px-1 max-w-3xl">
+              Two ways to keep your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E5F66] to-[#2DD4BF]">car looking its best.</span>
             </h2>
           </RevealOnScroll>
         </div>
@@ -61,8 +61,9 @@ export default function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href="#pricing"
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-10%" }}
@@ -71,7 +72,7 @@ export default function Services() {
                 delay: index * 0.2,
                 ease: [0.22, 1, 0.36, 1]
               }}
-              className="group relative h-[550px] lg:h-[700px] w-full overflow-hidden rounded-[2.5rem] bg-[#02282C] cursor-pointer shadow-2xl shadow-[#053E43]/10"
+              className="group relative h-[550px] lg:h-[700px] w-full overflow-hidden rounded-[2.5rem] bg-[#02282C] cursor-pointer shadow-2xl shadow-[#053E43]/10 block"
               onMouseEnter={() => !isMobile && setHoveredIndex(index)}
               onMouseLeave={() => !isMobile && setHoveredIndex(null)}
               whileHover={{
@@ -79,6 +80,13 @@ export default function Services() {
                 transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
               }}
             >
+              {/* Coming Soon Badge (only for CORRECTION & DETAILING at index 1) */}
+              {index === 1 && (
+                <div className="absolute top-8 left-8 lg:top-12 lg:left-12 z-20 bg-[#2DD4BF] text-[#02282C] font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full shadow-lg">
+                  Coming Soon
+                </div>
+              )}
+
               {/* Image Background with Alt Text for SEO */}
               <motion.img
                 initial={{ scale: 1.1 }}
@@ -146,7 +154,7 @@ export default function Services() {
                 </svg>
               </motion.div>
 
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

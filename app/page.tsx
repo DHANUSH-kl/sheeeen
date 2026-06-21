@@ -2,11 +2,12 @@ import Preloader from "@/components/Preloader";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import Problem from "@/components/Problem";
+import HowItWorks from "@/components/HowItWorks";
 import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
-import Location from "@/components/Location";
-import FAQ from "@/components/FAQ";
+import WhySheen from "@/components/WhySheen";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,11 +18,12 @@ export default function Home() {
       <main>
         <Hero />
         <Marquee />
+        <Problem />
+        <HowItWorks />
         <Services />
-        <Testimonials />
         <Pricing />
-        <Location />
-        <FAQ />
+        {/* <WhySheen /> */}
+        <FinalCTA />
       </main>
       <Footer />
     </>

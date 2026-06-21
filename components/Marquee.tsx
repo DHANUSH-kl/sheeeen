@@ -30,12 +30,12 @@ export default function Marquee() {
 
 function MarqueeTrack() {
   const items = [
-    { text: "Ceramic Coating", color: "text-[#053E43]/20" },
-    { text: "Paint Correction", color: "text-[#053E43]" },
-    { text: "Interior Detailing", color: "text-[#053E43]/20" },
-    { text: "Deep Clean", color: "text-[#053E43]" },
-    { text: "Detailing", color: "text-[#053E43]/20" },
-    { text: "Car Wash", color: "text-[#053E43]" },
+    { text: "Stay Parked", color: "text-[#053E43]" },
+    { text: "Doorstep Wash", color: "text-[#053E43]/20" },
+    { text: "Interior Clean", color: "text-[#053E43]" },
+    { text: "Deep Detailing", color: "text-[#053E43]/20" },
+    { text: "Mysore's Premium Wash", color: "text-[#053E43]" },
+    { text: "No drop-offs", color: "text-[#053E43]/20" },
   ];
 
   return (

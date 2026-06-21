@@ -46,9 +46,9 @@ export default function Footer() {
               {[
                 { name: 'Services', href: '#services' },
                 { name: 'Pricing', href: '#pricing' },
-                { name: 'Testimonials', href: '#testimonials' },
-                { name: 'Location', href: '#location' },
-                { name: 'FAQ', href: '#faq' }
+                { name: 'About Us', href: '#about' },
+                { name: 'Blog', href: '/blog' },
+                { name: 'Contact Us', href: 'tel:8660010700' }
               ].map((link, i) => (
                 <RevealOnScroll key={i} effect="slide-right" delay={0.2 + (i * 0.05)} width="100%">
                   <li>
