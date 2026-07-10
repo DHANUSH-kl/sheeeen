@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Preloader from '@/components/Preloader';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 interface FAQItem {
@@ -91,7 +90,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <Preloader />
       <Navigation />
 
       <main className="bg-[#F5F2EB] pt-32 sm:pt-40 pb-20">

@@ -27,7 +27,12 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         const handleAnchorClick = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
             const anchor = target.closest('a');
-            if (anchor && anchor.hash && anchor.origin === window.location.origin) {
+            if (
+                anchor &&
+                anchor.hash &&
+                anchor.origin === window.location.origin &&
+                anchor.pathname === window.location.pathname
+            ) {
                 e.preventDefault();
                 lenis.scrollTo(anchor.hash);
             }
