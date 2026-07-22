@@ -92,7 +92,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Hours</p>
-                    <span className="text-white/80 block">Mon-Sun: 6AM — 6PM</span>
+                    <span className="text-white/80 block">Mon-Sun: 7AM — 5PM</span>
                   </div>
                 </div>
               </RevealOnScroll>
