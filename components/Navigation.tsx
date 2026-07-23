@@ -165,10 +165,10 @@ export default function Navigation() {
                   variants={itemVariants}
                   className="mt-12 flex flex-col items-center gap-2 opacity-40"
                 >
-                  <p className="font-['Oswald'] text-[10px] tracking-[0.3em] uppercase text-white">
-                    Mysore’s Premium Studio
-                  </p>
-                  <div className="w-12 h-px bg-white/30" />
+                  {/* <p className="font-['Oswald'] text-[10px] tracking-[0.3em] uppercase text-white">
+                    Mysore’s Detailing Studio
+                  </p> */}
+                  {/* <div className="w-12 h-px bg-white/30" /> */}
                 </motion.div>
               </motion.div>
             </div>

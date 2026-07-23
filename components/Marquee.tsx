@@ -34,7 +34,7 @@ function MarqueeTrack() {
     { text: "Doorstep Wash", color: "text-[#053E43]/20" },
     { text: "Interior Clean", color: "text-[#053E43]" },
     { text: "Deep Detailing", color: "text-[#053E43]/20" },
-    { text: "Mysore's Premium Wash", color: "text-[#053E43]" },
+    { text: "Mysore's Doorstep Wash", color: "text-[#053E43]" },
     { text: "No drop-offs", color: "text-[#053E43]/20" },
   ];
 

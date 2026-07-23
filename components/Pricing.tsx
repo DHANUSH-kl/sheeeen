@@ -3,36 +3,45 @@
 export default function Pricing() {
   const services = [
     {
-      title: "Sheen Refresh",
-      price: "₹1,200",
+      title: "Sheen Refresh Pack",
+      description: "Perfect for regular maintenance to keep your car clean and fresh.",
+      duration: "60-90 Mins",
+      price: "₹1,400",
+      featuresHeader: "Includes:",
       features: [
-        "Two step exterior wash (Pre-wash + Foam wash)",
-        "Two-bucket contact wash (safe wash method)",
-        "Wheels & tire deep clean",
-        "Tire dressing for shine",
-        "Interior vacuum & dash wipe",
-        "Glass cleaning inside & out"
+        "Exterior Foam Wash",
+        "Safe Hand Wash",
+        "Interior Cleaning",
+        "Interior Vacuuming",
+        "Dashboard & Console Cleaning",
+        "Door Jamb Cleaning",
+        "Interior & Exterior Glass Cleaning",
+        "Trim & Tyre Dressing",
+        "Final Quality Inspection"
       ],
       popular: false,
       color: "from-[#053E43] to-[#0E5F66]",
-      whatsappMessage: "Hello, I'd like to book the Sheen Refresh (₹1200). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the Sheen Refresh Pack (₹1,400). Please let me know available slots."
     },
     {
-      title: "Sheen Signature",
-      price: "₹5,200",
+      title: "Sheen Signature Pack",
+      description: "A complete deep detailing service that thoroughly cleans your vehicle inside and out.",
+      duration: "2.5 Hours",
+      price: "₹3,999",
+      featuresHeader: "Includes everything in Refresh, plus:",
       features: [
-        "Everything in Sheen Refresh",
-        "Machine polishing for gloss enhancement",
-        "Light swirl removal",
-        "Full interior steam cleaning",
-        "Leather conditioning & protection",
-        "Engine bay detailing",
-        "Minor scratch removal (T&C apply)",
-        "Paint iron decontamination"
+        "Paint Decontamination",
+        "Deep Interior Detailing",
+        "Steam Cleaning & Sanitization",
+        "Engine Bay Detailing",
+        "Carpet Cleaning",
+        "Air Vent & Hard-to-Reach Area Cleaning",
+        "Trim & Tyre Dressing",
+        "Final Quality Inspection"
       ],
       popular: true,
       color: "from-[#02282C] to-[#053E43]",
-      whatsappMessage: "Hello, I'd like to book the Sheen Signature (₹5200). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the Sheen Signature Pack (₹3,999). Please let me know available slots."
     }
   ];
 
@@ -71,7 +80,7 @@ export default function Pricing() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl overflow-hidden border-2 ${service.popular ? 'border-[#053E43] shadow-2xl' : 'border-[#053E43]/20'} bg-white transition-all duration-300 hover:shadow-xl hover:scale-[1.02]`}
+              className={`relative rounded-2xl overflow-hidden border-2 ${service.popular ? 'border-[#053E43] shadow-2xl' : 'border-[#053E43]/20'} bg-white transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col`}
             >
               {service.popular && (
                 <div className="absolute top-0 right-6 bg-gradient-to-r from-[#053E43] to-[#0E5F66] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-b-lg z-10">
@@ -79,19 +88,35 @@ export default function Pricing() {
                 </div>
               )}
 
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-grow">
                 {/* Service Title */}
-                <h3 className="font-['Oswald'] text-2xl uppercase tracking-tight text-[#053E43] mb-4">
+                <h3 className="font-['Oswald'] text-2xl uppercase tracking-tight text-[#053E43] mb-2">
                   {service.title}
                 </h3>
 
-                {/* Price */}
-                <div className="mb-8">
-                  <div className={`text-4xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
-                    {service.price}
+                {/* Service Description */}
+                <p className="font-['DM_Sans'] text-sm text-[#053E43]/70 mb-6 min-h-[40px]">
+                  {service.description}
+                </p>
+
+                {/* Price & Duration */}
+                <div className="mb-8 flex justify-between items-center bg-[#053E43]/5 p-4 rounded-xl">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#053E43]/50 block">Price</span>
+                    <div className={`text-4xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
+                      {service.price}
+                    </div>
                   </div>
-                  <p className="text-sm text-[#053E43]/60 mt-1">One-time service</p>
+                  <div className="text-right">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#053E43]/50 block">Duration</span>
+                    <span className="text-lg font-bold text-[#053E43]">{service.duration}</span>
+                  </div>
                 </div>
+
+                {/* Features Header */}
+                <h4 className="font-['Oswald'] text-xs font-bold uppercase tracking-wider text-[#053E43] mb-4">
+                  {service.featuresHeader}
+                </h4>
 
                 {/* Features List */}
                 <div className="space-y-4 mb-8">
@@ -118,7 +143,7 @@ export default function Pricing() {
                 {/* CTA Button - Opens WhatsApp */}
                 <button
                   onClick={() => handleWhatsAppClick(service.whatsappMessage)}
-                  className={`w-full py-3 px-6 rounded-lg font-bold uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 ${service.popular ? 'bg-gradient-to-r from-[#053E43] to-[#0E5F66] text-white hover:shadow-lg hover:scale-[1.02]' : 'bg-[#053E43]/10 text-[#053E43] hover:bg-[#053E43]/20'}`}
+                  className={`w-full py-3 px-6 rounded-lg font-bold uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-auto ${service.popular ? 'bg-gradient-to-r from-[#053E43] to-[#0E5F66] text-white hover:shadow-lg hover:scale-[1.02]' : 'bg-[#053E43]/10 text-[#053E43] hover:bg-[#053E43]/20'}`}
                 >
                   Book now
                 </button>

@@ -18,7 +18,7 @@ Wherever your car is — home, office, anywhere — we'll come wash it. No drop-
 **Secondary CTA (text link below button):** 📞 Call or WhatsApp +91 86600 10700
 
 **Supporting line under CTA:**
-Trained detailers · We come to you · 45–90 minutes
+Trained detailers · We come to you · 60–90 minutes
 
 ---
 
@@ -43,7 +43,7 @@ Pick a slot that fits your day — morning, afternoon, or evening. Takes less th
 Our trained detailer arrives at your doorstep, fully equipped. You don't lift a finger — you don't even need to step outside.
 
 ### 3. Spotless Car
-In 45–90 minutes, your car is professionally cleaned, inside and out. No queues, no token system, no hassle.
+In 60–90 minutes, your car is professionally cleaned, inside and out. No queues, no token system, no hassle.
 
 **[Book Your Wash →]**
 
@@ -53,21 +53,21 @@ In 45–90 minutes, your car is professionally cleaned, inside and out. No queue
 
 ## Two ways to keep your car looking its best.
 
-### Sheen Refresh
+### Sheen Refresh Pack
 **Interior + Exterior Wash**
 Your car's everyday refresh — a thorough wash and clean covering the dashboard, seats, mats, and a full exterior wash that leaves the paint looking sharp.
 
-*₹1,200*
+*₹1,400*
 
 **[Book a Refresh →]**
 
 ---
 
-### Sheen Signature
+### Sheen Signature Pack
 **Deep Interior + Exterior Detailing**
 A complete, hands-on detailing session for when your car needs more than a wash. Ideal every few months to keep it looking and feeling brand new.
 
-*₹5,200*
+*₹3,999*
 
 **[Book Signature →]**
 

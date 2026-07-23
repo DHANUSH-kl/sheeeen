@@ -56,11 +56,11 @@ export default function Hero() {
         </div>
 
         {/* Subheadline */}
-        <RevealOnScroll effect="fade-up" delay={0.4} width="100%" className="flex justify-center mb-12">
+        {/* <RevealOnScroll effect="fade-up" delay={0.4} width="100%" className="flex justify-center mb-12">
           <p className="font-['DM_Sans'] text-base md:text-lg lg:text-xl font-medium text-white/80 leading-relaxed max-w-2xl text-center">
             Wherever your car is home, office, anywhere we'll come wash it. No drop-offs, no waiting rooms, no wasted afternoons. You stay put. We do the work.
           </p>
-        </RevealOnScroll>
+        </RevealOnScroll> */}
 
         {/* Action Buttons & Taglines */}
         <RevealOnScroll effect="fade-up" delay={0.6} width="100%" className="flex flex-col items-center">
@@ -106,7 +106,7 @@ export default function Hero() {
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF]" />
               <span className="font-['DM_Sans'] text-xs font-semibold tracking-[0.15em] text-white/50 uppercase">
-                45–90 minutes
+                60–90 minutes
               </span>
             </div>
           </div>

@@ -3,12 +3,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sheen.co.in/'),
-  title: "Sheen | Premium Car Detailing & Wash Studio in Mysore",
-  description: "Experience Mysore's finest automotive care. Sheen specializes in premium ceramic coating, paint correction, interior detailing, and high-end car wash services. Est. 2024.",
-  keywords: ["car detailing mysore", "ceramic coating mysore", "car wash mysore", "paint correction mysore", "premium car detailing", "sheen detailing"],
+  title: "Sheen | Car Detailing & Wash Studio in Mysore",
+  description: "Experience Mysore's finest automotive care. Sheen specializes in ceramic coating, paint correction, interior detailing, and high-end car wash services. Est. 2024.",
+  keywords: ["car detailing mysore", "ceramic coating mysore", "car wash mysore", "paint correction mysore", "car detailing", "sheen detailing"],
   authors: [{ name: "Sheen Detailing Studio" }],
   openGraph: {
-    title: "Sheen | Premium Car Detailing Mysore",
+    title: "Sheen | Car Detailing Mysore",
     description: "Transform your vehicle with Mysore's premier detailing studio. Precision, chemistry, and craftsmanship.",
     url: "https://sheen.co.in/", // Adjust to actual URL
     siteName: "Sheen Detailing",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sheen | Premium Car Detailing Mysore",
-    description: "Premium automotive care and detailing services in Mysore.",
+    title: "Sheen | Car Detailing Mysore",
+    description: "Automotive care and detailing services in Mysore.",
     images: ["/logo.png"],
   },
   robots: {
@@ -63,20 +63,28 @@ const jsonLd = {
         "latitude": 12.2958,
         "longitude": 76.6394
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "06:00",
-        "closes": "18:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday"
+          ],
+          "opens": "07:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "07:00",
+          "closes": "17:00"
+        }
+      ],
       "sameAs": [
         "https://www.instagram.com/sheen.co.in_?igsh=MTNsZGFyaXFkdzlrZw=="
       ],
@@ -88,20 +96,20 @@ const jsonLd = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Premium Wash Package",
+              "name": "Sheen Refresh Pack",
               "description": "Professional multi-stage car wash with pH-neutral snow foam, wheel cleaning, and interior vacuuming."
             },
-            "price": "999",
+            "price": "1400",
             "priceCurrency": "INR"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Complete Detailing Package",
+              "name": "Sheen Signature Pack",
               "description": "Full restorative detailing including machine polishing, interior steam cleaning, and ceramic protection."
             },
-            "price": "3000",
+            "price": "3999",
             "priceCurrency": "INR"
           }
         ]

@@ -21,7 +21,7 @@ export default function Footer() {
             </RevealOnScroll>
             <RevealOnScroll effect="fade-up" delay={0.2}>
               <p className="font-['DM_Sans'] text-white/60 font-medium text-base leading-relaxed max-w-sm">
-                Premium automotive mobile detailing.
+                Professional automotive mobile detailing.
                 Transforming vehicles with precision, chemistry, and craftsmanship.
               </p>
             </RevealOnScroll>
@@ -92,7 +92,9 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Hours</p>
-                    <span className="text-white/80 block">Mon-Sun: 7AM — 5PM</span>
+                    <span className="text-white/80 block">Mon-Tue: 7AM — 5PM</span>
+                    <span className="text-white/80 block">Thu-Sun: 7AM — 5PM</span>
+                    <span className="text-[#2DD4BF] block font-semibold mt-1">Closed Wednesday</span>
                   </div>
                 </div>
               </RevealOnScroll>
@@ -107,7 +109,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/40 font-['DM_Sans']">
           <div className="flex items-center gap-6 mb-4 md:mb-0">
             <p>
-              © 2025 Sheen • Premium Automotive Detailing
+              © 2025 Sheen • Automotive Detailing
             </p>
             <a
               href="https://www.instagram.com/sheen.co.in_?igsh=MTNsZGFyaXFkdzlrZw=="

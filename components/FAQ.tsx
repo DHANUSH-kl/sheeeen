@@ -32,10 +32,10 @@ export default function FAQ() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#053E43]/60 block mb-3">
+          <span className="font-['Oswald'] text-[10px] uppercase tracking-[0.25em] text-[#053E43]/60 block mb-3">
             Common Questions
           </span>
-          <h2 className="text-4xl sm:text-5xl uppercase tracking-tighter text-[#053E43] mb-6">
+          <h2 className="font-['Oswald'] text-4xl sm:text-5xl uppercase tracking-tighter text-[#053E43] mb-6">
             Frequently Asked{" "}
             <span className="italic text-[#0E5F66]">Questions</span>
           </h2>
@@ -77,7 +77,7 @@ export default function FAQ() {
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 p-8 bg-gradient-to-r from-[#053E43] to-[#0E5F66] rounded-2xl text-white">
             <div className="text-left">
-              <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
+              <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider mb-2">Still have questions?</h3>
               <p className="opacity-90">Our team is ready to assist you</p>
             </div>
             <a

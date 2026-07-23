@@ -21,7 +21,7 @@ export default function Location() {
           </RevealOnScroll>
           <RevealOnScroll effect="fade-up" delay={0.3}>
             <p className="font-['DM_Sans'] text-base sm:text-lg text-[#053E43]/70 leading-relaxed max-w-2xl mx-auto mt-6">
-              We are a fully mobile detailing service without a fixed physical studio. We provide our premium detailing services directly to your doorstep <strong>across entire Mysore</strong>.
+              We are a fully mobile detailing service without a fixed physical studio. We provide our detailing services directly to your doorstep <strong>across entire Mysore</strong>.
             </p>
           </RevealOnScroll>
         </div>
@@ -33,12 +33,20 @@ export default function Location() {
                <h3 className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-[#053E43] mb-4">
                  Working Hours
                </h3>
-               <div className="grid grid-cols-2 gap-y-3 text-base text-[#053E43]/70 font-['DM_Sans']">
-                 <span>Monday – Sunday</span>
-                 <span className="text-right font-bold text-[#053E43]">
-                   6:00 AM – 6:00 PM
-                 </span>
-               </div>
+                <div className="space-y-3 text-base text-[#053E43]/70 font-['DM_Sans']">
+                  <div className="flex justify-between">
+                    <span>Mon – Tue</span>
+                    <span className="text-right font-bold text-[#053E43]">7:00 AM – 5:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Thu – Sun</span>
+                    <span className="text-right font-bold text-[#053E43]">7:00 AM – 5:00 PM</span>
+                  </div>
+                  <div className="flex justify-between border-t border-[#053E43]/10 pt-2 text-[#0E5F66] font-semibold">
+                    <span>Wednesday</span>
+                    <span className="text-right">Closed</span>
+                  </div>
+                </div>
              </div>
            </RevealOnScroll>
 

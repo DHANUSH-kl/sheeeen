@@ -7,7 +7,7 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Call & Book",
+      title: "Tap & Book",
       desc: "Pick a slot that fits your day — morning, afternoon, or evening. Takes less than a minute, over a call or WhatsApp."
     },
     {
@@ -18,7 +18,7 @@ export default function HowItWorks() {
     {
       number: "03",
       title: "Spotless Car",
-      desc: "In 45–90 minutes, your car is professionally cleaned, inside and out. No queues, no token system, no hassle."
+      desc: "In 60–90 minutes, your car is professionally cleaned, inside and out. No queues, no token system, no hassle."
     }
   ];
 

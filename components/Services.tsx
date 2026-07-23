@@ -81,11 +81,11 @@ export default function Services() {
               }}
             >
               {/* Coming Soon Badge (only for CORRECTION & DETAILING at index 1) */}
-              {index === 1 && (
+              {/* {index === 1 && (
                 <div className="absolute top-8 left-8 lg:top-12 lg:left-12 z-20 bg-[#2DD4BF] text-[#02282C] font-['Oswald'] text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full shadow-lg">
                   Coming Soon
                 </div>
-              )}
+              )} */}
 
               {/* Image Background with Alt Text for SEO */}
               <motion.img

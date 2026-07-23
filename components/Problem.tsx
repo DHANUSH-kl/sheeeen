@@ -17,7 +17,7 @@ export default function Problem() {
       title: "Sheen Doorstep Wash",
       points: [
         "Stay parked at home, office, anywhere",
-        "Completed in 45–90 minutes flat",
+        "Completed in 60–90 minutes flat",
         "Trained detailers using proper pH-neutral products",
         "Flawless, scratch-free showroom gloss"
       ]

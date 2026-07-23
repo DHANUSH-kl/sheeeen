@@ -21,11 +21,11 @@ export default function ContactPage() {
     },
     {
       question: "Do I need to book an appointment in advance?",
-      answer: "Yes, we operate strictly by appointment to ensure dedicated time and premium attention for your vehicle. You can book a slot in under a minute via a direct phone call or WhatsApp message."
+      answer: "Yes, we operate strictly by appointment to ensure dedicated time and attention for your vehicle. You can book a slot in under a minute via a direct phone call or WhatsApp message."
     },
     {
       question: "How long does a typical detailing service take?",
-      answer: "A Sheen Refresh interior + exterior wash takes about 45 to 90 minutes. A deep-detailing package like Sheen Signature takes 4 to 6 hours depending on the condition and size of your vehicle."
+      answer: "A Sheen Refresh interior + exterior wash takes about 60 to 90 minutes. A deep-detailing package like Sheen Signature takes 4 to 6 hours depending on the condition and size of your vehicle."
     },
     {
       question: "Do you offer pick-up and drop service?",
@@ -124,7 +124,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-1">Service Area</h3>
+                    <h3 className="font-['Oswald'] text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-1">Service Area</h3>
                     <p className="text-base sm:text-lg font-bold">
                       Doorstep Detailing
                     </p>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-1">Email Support</h3>
+                    <h3 className="font-['Oswald'] text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-1">Email Support</h3>
                     <a href="mailto:support@sheen.co.in" className="text-base sm:text-lg font-bold hover:text-[#0E5F66] transition-colors block">
                       support@sheen.co.in
                     </a>
@@ -157,19 +157,22 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-1">Phone & WhatsApp</h3>
+                    <h3 className="font-['Oswald'] text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-1">Phone & WhatsApp</h3>
                     <a href="tel:8660010700" className="text-base sm:text-lg font-bold hover:text-[#0E5F66] transition-colors block">
                       +91 86600 10700
                     </a>
-                    <p className="text-xs font-medium text-[#053E43]/60 mt-0.5">
-                      Mon-Sun: 6:00 AM – 6:00 PM
+                    <p className="text-xs font-medium text-[#053E43]/60 mt-0.5 block">
+                      Mon-Tue, Thu-Sun: 7:00 AM – 5:00 PM
+                    </p>
+                    <p className="text-xs font-semibold text-[#0E5F66] mt-0.5 block">
+                      Closed Wednesday
                     </p>
                   </div>
                 </div>
 
                 {/* Social Capsules Grid */}
                 <div className="pt-4">
-                  <h3 className="text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-4">Connect With Us</h3>
+                  <h3 className="font-['Oswald'] text-xs uppercase font-bold tracking-widest text-[#053E43]/50 mb-4">Connect With Us</h3>
                   <div className="grid grid-cols-2 gap-4 max-w-md">
                     {socials.map((social) => (
                       <a
