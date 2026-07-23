@@ -6,7 +6,7 @@ export default function Pricing() {
       title: "Sheen Refresh Pack",
       description: "Perfect for regular maintenance to keep your car clean and fresh.",
       duration: "60-90 Mins",
-      price: "₹1,400",
+      price: "₹1,200",
       featuresHeader: "Includes:",
       features: [
         "Exterior Foam Wash",
