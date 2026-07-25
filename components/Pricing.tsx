@@ -21,7 +21,8 @@ export default function Pricing() {
       ],
       popular: false,
       color: "from-[#053E43] to-[#0E5F66]",
-      whatsappMessage: "Hello, I'd like to book the Sheen Refresh Pack (₹1,400). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the Sheen Refresh Pack (₹1,400). Please let me know available slots.",
+      ctaUrl: "https://sheen.zohobookings.in/refreshpack",
     },
     {
       title: "Sheen Signature Pack",
@@ -41,7 +42,8 @@ export default function Pricing() {
       ],
       popular: true,
       color: "from-[#02282C] to-[#053E43]",
-      whatsappMessage: "Hello, I'd like to book the Sheen Signature Pack (₹3,999). Please let me know available slots."
+      whatsappMessage: "Hello, I'd like to book the Sheen Signature Pack (₹3,999). Please let me know available slots.",
+      ctaUrl: "https://sheen.zohobookings.in/signaturepack",
     }
   ];
 
@@ -142,7 +144,7 @@ export default function Pricing() {
 
                 {/* CTA Button - Opens WhatsApp */}
                 <button
-                  onClick={() => handleWhatsAppClick(service.whatsappMessage)}
+                  onClick={() => { if (service.ctaUrl) { window.open(service.ctaUrl, '_blank'); } else { handleWhatsAppClick(service.whatsappMessage); } }}
                   className={`w-full py-3 px-6 rounded-lg font-bold uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-auto ${service.popular ? 'bg-gradient-to-r from-[#053E43] to-[#0E5F66] text-white hover:shadow-lg hover:scale-[1.02]' : 'bg-[#053E43]/10 text-[#053E43] hover:bg-[#053E43]/20'}`}
                 >
                   Book now

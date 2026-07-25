@@ -67,7 +67,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
             {/* Primary CTA */}
             <a
-              href="#pricing"
+              href="https://sheen.zohobookings.in/sheen" target="_blank"
               className="group relative overflow-hidden rounded-full bg-[#2DD4BF] px-10 py-4 font-['Oswald'] text-sm font-bold uppercase tracking-[0.15em] text-[#02282C] hover:text-[#02282C] transition-all duration-300 flex items-center justify-center gap-3 min-w-[220px] shadow-xl hover:shadow-[#2DD4BF]/20"
             >
               <span className="relative z-10 transition-transform duration-300 group-hover:-translate-x-1">Book Your Wash</span>
