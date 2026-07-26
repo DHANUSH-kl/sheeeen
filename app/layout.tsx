@@ -147,6 +147,8 @@ const jsonLd = {
   ]
 };
 
+import { Suspense } from "react";
+import { FacebookPixelEvents } from "@/components/FacebookPixel";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({
@@ -201,6 +203,9 @@ export default function RootLayout({
         {/* End Meta Pixel Code */}
       </head>
       <body className="font-['DM_Sans'] antialiased overflow-x-hidden selection:bg-[#053E43] selection:text-white">
+        <Suspense fallback={null}>
+          <FacebookPixelEvents />
+        </Suspense>
         <SmoothScroll>
           {children}
         </SmoothScroll>
